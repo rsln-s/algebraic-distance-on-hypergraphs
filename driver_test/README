@@ -1,0 +1,11 @@
+Scripts run_zoltan_final.py and run_patoh_final.py run zoltan on all files in the directory and produce csvs output_.csv that contain cuts for given number of parts and imbalance.
+
+## Example:
+
+cd ../build
+make
+cd ../driver_test/run_dir
+cp ../../build/packages/zoltan/src/driver/*.exe .
+cp ../run_zoltan_final.py .
+cp ../lp_ken_07/lp_ken_07.mtx .
+python3 run_zoltan_final.py

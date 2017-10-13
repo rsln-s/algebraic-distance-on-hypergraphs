@@ -1,0 +1,25 @@
+=====================
+
+Install
+
+====================
+
+Dependencies:
+
+Tested with:
+- gcc 4.8.1
+- openmpi 1.8.4
+and
+- intel 16.0 and newer
+
+Installation:
+
+cd algebraic-distance-on-hypergraphs
+mkdir build
+cd build
+cmake -D CMAKE_INSTALL_PREFIX:FILEPATH="/home/rshaydu/algebraic-distance-on-hypergraphs/build" -D MPI_BASE_DIR="/software/openmpi/1.8.4_gcc" -D MPI_C_COMPILER:FILEPATH="/software/openmpi/1.8.4_gcc/bin/mpicc" -D MPI_CXX_COMPILER:FILEPATH="/software/openmpi/1.8.4_gcc/bin/mpic++" -D Trilinos_ENABLE_ALL_PACKAGES:BOOL=OFF -D Trilinos_ENABLE_Zoltan:BOOL=ON  -D Zoltan_ENABLE_EXAMPLES:BOOL=ON -D TPL_ENABLE_MPI:BOOL=ON -D Trilinos_ENABLE_Fortran:BOOL=OFF -D Zoltan_ENABLE_TESTS:BOOL=ON -D CMAKE_EXPORT_COMPILE_COMMANDS=ON -D COMM=mpi ..
+make
+
+===================
+
+In general, the user is advised to refer to Trilinos documentation for troubleshooting any problems during installation: http://trilinos.org/about/documentation/
